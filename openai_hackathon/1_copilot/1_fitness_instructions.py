@@ -3,7 +3,7 @@ Add type hints to all your functionality and use mypi to test for correctness.
 
 Compute the total intensity of repetitions of a workout.
 """
-
+import blah
 
 """
 
