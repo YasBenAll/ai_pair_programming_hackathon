@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "openai-hackathon"
+version = "0.1.0"
+description = "hacking with AI assistants"
+authors = ["Luuk van der Velden <luuk@codebeez.nl>"]
+readme = "README.md"
+packages = [{include = "openai_hackathon"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Jinja2 = "^3.1.2"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.1"
+black = "^23.1.0"
+mypi = "^0.0.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

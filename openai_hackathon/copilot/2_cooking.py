@@ -1,6 +1,7 @@
 """
-Pick a favorite recipe.
+Add type hints to all your functionality and use mypi to test for correctness.
 
+Pick a favorite recipe.
 Ingredients and spices are required with quantities or weights.
 
 """

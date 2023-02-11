@@ -1,6 +1,6 @@
-
-
 """
+Add type hints to all your functionality and use mypi to test for correctness.
+
 Compute the total intensity of repetitions of a workout.
 """
 
@@ -15,7 +15,6 @@ Compute the total intensity of a routine for any number of workouts.
 """
 Compute the total intensity for any number of days that has any number routines. 
 """
-
 
 """
 Plan a week of workouts based on the different parts of the body
