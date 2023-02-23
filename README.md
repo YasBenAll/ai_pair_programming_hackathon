@@ -20,8 +20,8 @@ Part 1:
 
 Part 2:
 
-1. create an openai account
-1. access chat-gpt
+1. create an openai account (supports Google and Microsoft accounts)
+1. access chat-gpt (https://chat.openai.com/auth/login)[https://chat.openai.com/auth/login]
 1. copy paste any code and formulate your questions
 1. happy hacking
 

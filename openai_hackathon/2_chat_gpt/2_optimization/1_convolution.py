@@ -1,5 +1,6 @@
 """
-Make the following convolution faster by asking chat-gpt.
+Fix issues with this untested naive implementation of a convolution.
+Also make the convolution faster with help of chat-gpt.
 
 """
 import numpy as np
@@ -18,7 +19,6 @@ n_samples = domain[1] * sample_rate
 t_axis = np.linspace(domain[0], domain[1], num=n_samples)
 signal_a = np.sin(freq_a * t_axis)
 signal_b = np.cos(freq_b * t_axis)
-
 
 
 def convolute(signal_a, signal_b, n_lags, n_samples):
@@ -40,7 +40,9 @@ def compute_power(conv, n_lags, n_samples):
     for lag in range(n_lags):
         for index in range(n_samples):
             power[lag] += conv[lag, index] ** 2
+        power[lag] /= n_samples
     return power
+
 
 conv = convolute(signal_a, signal_b, n_lags, n_samples)
 power = compute_power(conv, n_lags, n_samples)
