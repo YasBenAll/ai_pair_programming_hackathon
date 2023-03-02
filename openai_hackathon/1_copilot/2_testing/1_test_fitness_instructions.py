@@ -17,3 +17,21 @@ Alter your functionality and approach altering the test in two ways
 What leads to the best collaboration with co-pilot?
 
 """
+
+# 1. 
+# write unit tests for the code in openai_hackathon/1_copilot/1_from_spec/1_fitness_instructions.py	
+class TestFitnessInstructions:
+    def test_intensity():
+        pass
+    def test_routine_intensity():
+        pass
+    def test_total_intensity():
+        pass
+    def test_total_intensity_plan():
+        pass
+
+# 1.1 Copilot covers all code paths
+# 1.2 It cannot guess what data I need
+
+# 2.1 
+

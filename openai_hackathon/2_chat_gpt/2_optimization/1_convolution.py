@@ -15,7 +15,7 @@ freq_a = 10 * 2 * np.pi
 freq_b = 5 * 2 * np.pi
 domain = (0, 20 * np.pi)
 
-n_samples = domain[1] * sample_rate
+n_samples = int(domain[1] * sample_rate)
 t_axis = np.linspace(domain[0], domain[1], num=n_samples)
 signal_a = np.sin(freq_a * t_axis)
 signal_b = np.cos(freq_b * t_axis)
@@ -33,6 +33,13 @@ def convolute(signal_a, signal_b, n_lags, n_samples):
 
     return conv
 
+# code genereated by chat-gpt
+def convolute(signal_a, signal_b, n_lags, n_samples):
+    padded_signal_b = np.pad(signal_b, (n_lags-1, 0), mode='constant', constant_values=fill_edge)
+    conv = np.zeros((n_lags, n_samples))
+    for lag in range(n_lags):
+        conv[lag, :] = np.convolve(signal_a, padded_signal_b[lag:lag+n_samples], mode='same')
+    return conv
 
 def compute_power(conv, n_lags, n_samples):
     power = np.zeros(n_lags)
@@ -53,3 +60,4 @@ ax = fig.add_subplot(1, 1, 1)
 ax.plot(list(range(n_lags)), power)
 ax.set_xlabel("lags")
 ax.set_ylabel("sum of squares")
+fig.savefig("convolution.png")
